@@ -6,7 +6,8 @@ const weatherForm = document.querySelector('form')
 const address = document.querySelector('input')
 const message1 = document.querySelector('#message-1')
 const message2 = document.querySelector('#message-2')
-//Add listener 
+//Add listener ..
+
 weatherForm.addEventListener('submit',(e)=>{
     e.preventDefault()//prevents browser from refreshing on event occuring
     console.log(address.value)
@@ -25,11 +26,6 @@ const fetchWeather = (address) =>{
             message1.textContent = data.error;
         }
         else{
-        //     console.log(data.latitude)
-        //     console.log(data.longitude)
-        //     console.log(data.location)
-        //     console.log(data.forecast)
-        //
             message1.textContent = data.location
             message2.textContent = data.forecast
     }
